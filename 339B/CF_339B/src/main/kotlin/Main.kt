@@ -7,7 +7,7 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
 
     var n = st.nextToken().toInt()
     var m = st.nextToken().toInt()
-    var res: Int = 0;
+    var res:Long = 0;
 
     st = StringTokenizer(readLine());
 
