@@ -1,27 +1,19 @@
-import java.io.BufferedReader
-import java.io.InputStreamReader
+class Solution {
+    fun solution(array: IntArray): IntArray {
+        var answer: IntArray = IntArray(2)
+        var max = 0;
+        var idx = 0;
 
-fun solution() = with(BufferedReader(InputStreamReader(System.`in`))) {
-    var sb = StringBuilder()
-
-    var t = readLine().toInt()
-    while (t-- > 0) {
-        var rating = readLine().toInt()
-        if (rating >= 1900) {
-            sb.append("Division 1")
-        } else if (rating >= 1600) {
-            sb.append("Division 2")
-        } else if (rating >= 1400) {
-            sb.append("Division 3")
-        } else {
-            sb.append("Division 4")
+        for (i in array.indices) {
+            if (array[i] > max) {
+                max = array[i]
+                idx = i
+            }
         }
-        sb.append('\n')
+
+        answer[0] = max
+        answer[1] = idx
+
+        return answer
     }
-
-    print(sb)
-}
-
-fun main() {
-    solution()
 }
